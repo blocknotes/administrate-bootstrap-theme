@@ -1,5 +1,21 @@
 // Imported in content_body
 
+#error_explanation {
+  @extend .alert, .alert-danger;
+
+  > h2 {
+    @extend .h4, .alert-heading;
+  }
+
+  > ul {
+    @extend .mb-0;
+  }
+}
+
+.field_with_errors {
+  @extend .text-danger;
+}
+
 .form-actions > input {
   @extend .btn;
 }

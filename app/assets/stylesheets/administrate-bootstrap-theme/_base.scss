@@ -13,6 +13,20 @@
   height: 100vh;
 }
 
+.flashes {
+  position: fixed;
+  text-align: center;
+  width: calc(100% - #{$navigation-width});
+
+  > .flash {
+    @extend .alert, .d-inline-block;
+
+    &.flash-notice {
+      @extend .alert-info;
+    }
+  }
+}
+
 .main-content {
   @extend .d-flex, .flex-column;
 
