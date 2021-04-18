@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/blocknotes/administrate-bootstrap-theme'
   # spec.metadata['changelog_uri'] = "TODO: Put your gem's CHANGELOG.md URL here."
 
-  spec.files = Dir["{app,config,db,lib}/**/*", 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir["{app,config,db,lib,node_modules}/**/*", 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   spec.add_runtime_dependency 'administrate', '~> 0.15'
   # spec.add_dependency 'bootstrap', '~> 5.0.0.beta2'
