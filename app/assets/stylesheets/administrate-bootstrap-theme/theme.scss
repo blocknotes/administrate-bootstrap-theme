@@ -21,11 +21,23 @@ nav.pagination {
 }
 
 .main-content__body {
+  table {
+    @extend .table-striped;
+  }
+
+  .attribute-data > table {
+    @extend .table-bordered;
+  }
+
   .form-actions > input {
     @extend .btn-primary;
   }
 
   .js-table-row {
+    .action-show {
+      @extend .link-secondary;
+    }
+
     .action-edit {
       @extend .btn-secondary;
     }
