@@ -1,0 +1,54 @@
+.main-content__body {
+  @extend .container-fluid;
+
+  @import "form";
+
+  > dl {
+    @extend .row;
+
+    dt {
+      @extend .col-2, .text-end;
+    }
+
+    dd {
+      @extend .col-10;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  table {
+    @extend .table;
+  }
+
+  .cell-label__sort-indicator > svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  .cell-label__sort-indicator--desc > svg {
+    transform: rotate(180deg);
+  }
+
+  .js-table-row {
+    > td {
+      padding: 0.25rem 0.25rem;
+      text-align: center;
+
+      &.cell-data {
+        padding: 0.5rem 0.5rem;
+        text-align: left;
+      }
+    }
+
+    .action-edit {
+      @extend .btn, .btn-sm;
+    }
+
+    [data-method="delete"] {
+      @extend .btn, .btn-sm;
+    }
+  }
+}

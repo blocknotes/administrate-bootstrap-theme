@@ -1,0 +1,25 @@
+// Imported in content_body
+
+.form-actions > input {
+  @extend .btn;
+}
+
+.field-unit {
+  @extend .row;
+}
+
+.field-unit__field {
+  @extend .col-10;
+
+  > input[type="text"], > textarea {
+    @extend .form-control;
+  }
+}
+
+.field-unit__label {
+  @extend .col-2;
+
+  > label {
+    @extend .col-form-label;
+  }
+}

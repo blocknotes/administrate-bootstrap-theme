@@ -1,0 +1,43 @@
+@import "base";
+
+nav.navigation {
+  @extend .text-white, .bg-dark;
+
+  .button--alt {
+    @extend .btn-outline-light;
+  }
+
+  .navigation__link {
+    @extend .btn-outline-light;
+  }
+}
+
+nav.pagination {
+  @extend .border;
+}
+
+.main-content {
+  @extend .bg-light;
+}
+
+.main-content__body {
+  .form-actions > input {
+    @extend .btn-primary;
+  }
+
+  .js-table-row {
+    .action-edit {
+      @extend .btn-secondary;
+    }
+
+    [data-method="delete"] {
+      @extend .btn-danger;
+    }
+  }
+}
+
+.main-content__header {
+  .button {
+    @extend .btn-primary;
+  }
+}

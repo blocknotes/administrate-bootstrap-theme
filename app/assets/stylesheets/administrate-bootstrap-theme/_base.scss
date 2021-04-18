@@ -1,0 +1,21 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "variables";
+
+@import "components/navigation";
+@import "components/content_header";
+@import "components/content_body";
+@import "components/pagination";
+
+.app-container {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.main-content {
+  @extend .d-flex, .flex-column;
+
+  overflow-y: scroll;
+  width: calc(100% - #{$navigation-width});
+}

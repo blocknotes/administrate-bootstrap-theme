@@ -1,0 +1,37 @@
+.main-content__header {
+  @extend .p-3, .mb-3, .border-bottom;
+  @extend .d-flex, .flex-wrap, .align-items-center, .justify-content-center, .justify-content-lg-start;
+
+  > div:last-child {
+    @extend .text-end;
+  }
+
+  > form {
+    @extend .d-flex, .col-12, .col-lg-auto, .mb-3, .mb-lg-0, .me-md-4;
+
+    input {
+      @extend .form-control, .form-control-sm;
+    }
+  }
+
+  > h1 {
+    @extend .nav, .col-12, .col-lg-auto, .me-lg-auto, .mb-2, .justify-content-center, .mb-md-0;
+
+    font-size: 1.6rem;
+  }
+
+  svg {
+    &.search__eyeglass-icon, &.search__clear-icon {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .button {
+    @extend .btn, .btn-sm;
+  }
+
+  .search__input {
+    @extend .mx-2;
+  }
+}
