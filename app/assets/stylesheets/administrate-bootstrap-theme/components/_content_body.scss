@@ -8,6 +8,8 @@
 
     dt {
       @extend .col-2, .text-end;
+
+      min-height: 32px;
     }
 
     dd {
@@ -21,6 +23,20 @@
 
   table {
     @extend .table;
+  }
+
+  .attribute--nested {
+    > div {
+      display: flex;
+    }
+
+    legend {
+      @extend .fs-5, .border-bottom;
+    }
+
+    .attribute-data {
+      @extend .ps-4;
+    }
   }
 
   .cell-label__sort-indicator > svg {
