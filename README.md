@@ -9,21 +9,25 @@ Features:
 ![screenshot](screenshot.png)
 
 ## Installation
-- Add to the *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
-- Modify *app/assets/config/manifest.js*, replacing the administrate assets with:
+- Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
+- Add to *app/assets/config/manifest.js*:
 
 ```js
 //= link administrate-bootstrap-theme/theme.css
-
-// OFF link administrate/application.css
-// OFF link administrate/application.js
 ```
 
-- Edit *app/views/layouts/admin/application.html.erb* (you can generate it using `rails generate administrate:views:layout`),
-  adding before head closing tag:
+- Generate the layout views if they are missing: `rails generate administrate:views:layout` (only **_stylesheet** and **_javascript** partials are needed)
+- Update *app/views/admin/application/_stylesheet.html.erb*, leaving only:
 
-```html
+```erb
 <%= stylesheet_link_tag 'administrate-bootstrap-theme/theme', media: 'all' %>
+<%= yield :stylesheet %>
+```
+
+- Update *app/views/admin/application/_javascript.html.erb*, leaving only:
+
+```erb
+<%= yield :javascript %>
 ```
 
 ## Customizations
