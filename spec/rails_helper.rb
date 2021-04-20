@@ -33,4 +33,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures = false
   config.render_views = false
+
+  config.before(:suite) do
+    Rails.application.load_seed # loading seeds
+  end
 end
