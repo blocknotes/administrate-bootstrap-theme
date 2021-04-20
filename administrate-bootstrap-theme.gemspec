@@ -26,5 +26,11 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'administrate', '~> 0.14'
 
+  spec.add_development_dependency 'activestorage', '~> 6.0'
+  spec.add_development_dependency 'capybara', '~> 3.33'
+  spec.add_development_dependency 'puma', '~> 4.3'
+  spec.add_development_dependency 'rspec-rails', '~> 4.0'
   spec.add_development_dependency 'rubocop', '~> 0.90'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.142'
+  spec.add_development_dependency 'sqlite3', '~> 1.4'
 end

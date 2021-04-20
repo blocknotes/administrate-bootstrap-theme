@@ -1,20 +1,16 @@
 # frozen_string_literal: true
 
-require "bundler/setup"
+require 'bundler/gem_tasks'
 
-APP_RAKEFILE = File.expand_path("test/dummy/Rakefile", __dir__)
-load "rails/tasks/engine.rake"
+begin
+  require 'rspec/core/rake_task'
 
-load "rails/tasks/statistics.rake"
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    # t.ruby_opts = %w[-w]
+    t.rspec_opts = ['--color', '--format documentation']
+  end
 
-require "bundler/gem_tasks"
-
-require "rake/testtask"
-
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+  task default: :spec
+rescue LoadError
+  puts '! LoadError: no RSpec available'
 end
-
-task default: :test
