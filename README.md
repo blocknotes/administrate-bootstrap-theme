@@ -2,7 +2,7 @@
 A Bootstrap 5 (_beta_) theme for [Administrate](https://github.com/thoughtbot/administrate).
 
 Features:
-- easy to install, just include CSS to apply the theme to a default Administrate structure;
+- easy to install, just include CSS/JS to apply the theme to a default Administrate structure;
 - customizable via SASS variables;
 - allow to use *Bootstrap* components in the admin.
 
@@ -14,6 +14,7 @@ Features:
 
 ```js
 //= link administrate-bootstrap-theme/theme.css
+//= link administrate-bootstrap-theme/theme.js
 ```
 
 - Generate the layout views if they are missing: `rails generate administrate:views:layout` (only **_stylesheet** and **_javascript** partials are needed)
@@ -27,6 +28,7 @@ Features:
 - Update *app/views/admin/application/_javascript.html.erb*, leaving only:
 
 ```erb
+<%= javascript_include_tag 'administrate-bootstrap-theme/theme' %>
 <%= yield :javascript %>
 ```
 
