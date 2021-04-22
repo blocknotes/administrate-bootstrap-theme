@@ -1,41 +1,53 @@
-// Imported in content_body
-
-#error_explanation {
-  @extend .alert, .alert-danger;
-
-  > h2 {
-    @extend .h4, .alert-heading;
+.main-content__body {
+  legend {
+    @extend .fs-4, .my-2;
   }
 
-  > ul {
-    @extend .mb-0;
+  .field_with_errors {
+    @extend .text-danger;
   }
-}
 
-.field_with_errors {
-  @extend .text-danger;
-}
-
-.form-actions > input {
-  @extend .btn;
-}
-
-.field-unit {
-  @extend .row;
-}
-
-.field-unit__field {
-  @extend .col-10;
-
-  > input[type="text"], > textarea {
-    @extend .form-control;
+  .form-actions > input {
+    @extend .btn;
   }
-}
 
-.field-unit__label {
-  @extend .col-2;
+  .field-unit {
+    @extend .row, .mb-3;
+  }
 
-  > label {
-    @extend .col-form-label;
+  .field-unit__field {
+    @extend .col-10;
+
+    > input:not([type="checkbox"]), > textarea {
+      @extend .form-control;
+    }
+
+    > input[type="checkbox"] {
+      @extend .form-check-input
+    }
+
+    > select {
+      @extend .form-select;
+    }
+  }
+
+  .field-unit__label {
+    @extend .col-2;
+
+    > label {
+      @extend .col-form-label;
+    }
+  }
+
+  #error_explanation {
+    @extend .alert, .alert-danger;
+
+    > h2 {
+      @extend .h4, .alert-heading;
+    }
+
+    > ul {
+      @extend .mb-0;
+    }
   }
 }

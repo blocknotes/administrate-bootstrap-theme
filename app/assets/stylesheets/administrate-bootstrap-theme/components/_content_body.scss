@@ -1,7 +1,5 @@
 .main-content__body {
-  @extend .container-fluid;
-
-  @import "form";
+  @extend .container-fluid, .mb-3;
 
   > dl {
     @extend .row;
