@@ -6,7 +6,7 @@ Features:
 - customizable via SASS variables;
 - allow to use *Bootstrap* components in the admin.
 
-![screenshot](screenshot.png)
+See some [screenshots](#screenshots).
 
 ## Installation
 - Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
@@ -44,6 +44,14 @@ $navigation-width: 300px;
 And replace the link tag in the *application.html.erb* with: `<%= stylesheet_link_tag 'admin', media: 'all' %>`
 
 For the complete list of options take a look [here](app/assets/stylesheets/administrate-bootstrap-theme/_variables.scss).
+
+## Screenshots
+- Index page:
+![screenshot_index](screenshot_index.png)
+- Show page:
+![screenshot_show](screenshot_show.png)
+- Form page:
+![screenshot_form](screenshot_form.png)
 
 ## Do you like it? Star it!
 If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
