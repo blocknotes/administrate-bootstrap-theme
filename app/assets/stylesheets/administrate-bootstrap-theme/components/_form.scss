@@ -18,7 +18,7 @@
   .field-unit__field {
     @extend .col-10;
 
-    > input:not([type="checkbox"]), > textarea {
+    > input:not([type="checkbox"]) {
       @extend .form-control;
     }
 
@@ -29,6 +29,11 @@
     > select {
       @extend .form-select;
     }
+
+    > textarea {
+      @extend .form-control;
+      min-height: 150px;
+    }
   }
 
   .field-unit__label {
@@ -36,6 +41,9 @@
 
     > label {
       @extend .col-form-label;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 0;
+      width: 100%;
     }
   }
 

@@ -1,4 +1,4 @@
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 @import "variables";
 
@@ -15,6 +15,7 @@
 }
 
 .flashes {
+  pointer-events: none;
   position: fixed;
   text-align: center;
   width: calc(100% - #{$navigation-width});
