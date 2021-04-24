@@ -47,11 +47,11 @@ For the complete list of options take a look [here](app/assets/stylesheets/admin
 
 ## Screenshots
 - Index page:
-![screenshot_index](screenshot_index.png)
+![Administrate Bootstrap Theme index page](extra/screenshot_index.png)
 - Show page:
-![screenshot_show](screenshot_show.png)
+![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
 - Form page:
-![screenshot_form](screenshot_form.png)
+![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
 
 ## Do you like it? Star it!
 If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
