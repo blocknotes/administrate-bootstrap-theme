@@ -30,8 +30,10 @@ RSpec.describe 'Index page', type: :system do
     visit '/admin/authors'
 
     expect(page).to have_css('.main-content__body th.cell-label > a', style: { 'font-weight' => '700' })
-    expect(page).to have_css('.main-content__body td.cell-data .action-show', style: { 'font-size' => '16px', 'font-weight' => '400' })
+    style = { 'font-size' => '16px', 'font-weight' => '400' }
+    expect(page).to have_css('.main-content__body td.cell-data .action-show', style: style)
     expect(page).to have_css('.main-content__body .js-table-row .action-edit', style: { 'font-size' => '14px' })
-    expect(page).to have_css('.main-content__body .js-table-row [data-method="delete"]', style: { 'font-size' => '14px' })
+    style = { 'font-size' => '14px' }
+    expect(page).to have_css('.main-content__body .js-table-row [data-method="delete"]', style: style)
   end
 end
