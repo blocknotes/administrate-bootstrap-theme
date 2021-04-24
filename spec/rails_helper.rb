@@ -34,6 +34,8 @@ RSpec.configure do |config|
   config.use_instantiated_fixtures = false
   config.render_views = false
 
+  config.include Helpers
+
   config.before(:suite) do
     Rails.application.load_seed # loading seeds
   end

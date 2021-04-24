@@ -14,4 +14,6 @@ group :development, :test do
   gem 'selenium-webdriver', '~> 3.142'
   gem 'sprockets', '~> 4.0'
   gem 'sqlite3', '~> 1.4'
+
+  gem 'pry-rails'
 end

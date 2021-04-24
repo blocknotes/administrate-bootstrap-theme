@@ -1,4 +1,4 @@
-# Administrate Bootstrap Theme [![Gem Version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme)
+# Administrate Bootstrap Theme [![Gem Version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme) ![specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/ruby.yml/badge.svg)
 A Bootstrap 5 (_beta_) theme for [Administrate](https://github.com/thoughtbot/administrate).
 
 Features:
