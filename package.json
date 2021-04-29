@@ -5,6 +5,7 @@
   "author": "Mattia Roccoberton <mat@blocknot.es>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3"
+    "bootstrap": "^5.0.0-beta3",
+    "flatpickr": "^4.6.9"
   }
 }
