@@ -4,14 +4,10 @@ nav.navigation {
   width: $navigation-width;
 
   .button--alt {
-    @extend .btn, .btn-outline-light, .mb-2;
+    @extend .btn, .mb-2;
   }
 
   .navigation__link {
     @extend .nav-link;
-  }
-
-  .navigation__link--active {
-    @extend .active;
   }
 }

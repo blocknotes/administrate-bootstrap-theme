@@ -1,14 +1,24 @@
 @import "base";
 
 nav.navigation {
-  @extend .text-white, .bg-dark;
+  @extend .text-white;
+
+  background: $navigation-bg;
 
   .button--alt {
     @extend .btn-outline-light;
+
+    color: $navigation-fg;
   }
 
   .navigation__link {
     @extend .btn-outline-light;
+
+    color: $navigation-fg;
+  }
+
+  .navigation__link--active {
+    background: $navigation-bg-active;
   }
 }
 
