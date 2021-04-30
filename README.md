@@ -37,7 +37,11 @@ To change variables it's necessary to create a new *.scss* (or *.sass*) file lik
 
 ```scss
 // app/assets/stylesheets/admin.scss
+$navigation-bg: #055160;
+$navigation-bg-active: #d51;
 $navigation-width: 300px;
+$primary: #087990;
+
 @import 'administrate-bootstrap-theme/theme';
 ```
 
@@ -52,6 +56,8 @@ For the complete list of options take a look [here](app/assets/stylesheets/admin
 ![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
 - Form page:
 ![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
+- Index page with some customized colors:
+![Administrate Bootstrap Theme index page customized](extra/screenshot_index_alt.png)
 
 ## Do you like it? Star it!
 If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
