@@ -1,8 +1,12 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require bootstrap/dist/js/bootstrap.bundle
-//= require flatpickr
+// from: node_modules/bootstrap/dist/js/bootstrap.bundle.js
+//= require ./bootstrap/bootstrap.bundle
+
+// from: node_modules/flatpickr/dist/flatpickr.js
+//= require ./flatpickr/flatpickr
+
 //= require selectize
 
 document.addEventListener('DOMContentLoaded', function(_event) {

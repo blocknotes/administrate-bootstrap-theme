@@ -1,4 +1,8 @@
-@import "bootstrap/scss/bootstrap";
+// from: node_modules/bootstrap/scss
+@import "bootstrap/bootstrap";
+// from: node_modules/flatpickr/dist/flatpickr.css
+@import "flatpickr/flatpickr.css";
+@import "selectize";
 
 @import "variables";
 
@@ -7,7 +11,6 @@
 @import "components/content_body";
 @import "components/form";
 @import "components/pagination";
-@import "components/utils";
 
 .app-container {
   display: flex;
