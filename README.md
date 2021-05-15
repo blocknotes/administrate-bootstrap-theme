@@ -1,6 +1,6 @@
-# Administrate Bootstrap Theme [![Gem Version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme) [![Specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml)
+# Administrate Bootstrap Theme [![Gem Version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme) [![linters](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml) [![Specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml)
 
-A Bootstrap 5 (_beta_) theme for [Administrate](https://github.com/thoughtbot/administrate).
+A Bootstrap 5 theme for [Administrate](https://github.com/thoughtbot/administrate).
 
 Features:
 - easy to install, just include CSS/JS to apply the theme to a default Administrate structure;
@@ -10,6 +10,7 @@ Features:
 See some [screenshots](#screenshots).
 
 ## Installation
+
 - Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
 - Add to *app/assets/config/manifest.js*:
 
@@ -34,6 +35,7 @@ See some [screenshots](#screenshots).
 ```
 
 ## Customizations
+
 To change variables it's necessary to create a new *.scss* (or *.sass*) file like this one (ex. *admin.scss*):
 
 ```scss
@@ -51,22 +53,22 @@ And replace the link tag in the *application.html.erb* with: `<%= stylesheet_lin
 For the complete list of options take a look [here](app/assets/stylesheets/administrate-bootstrap-theme/_variables.scss).
 
 ## Screenshots
-- Index page:
-![Administrate Bootstrap Theme index page](extra/screenshot_index.png)
-- Show page:
-![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
-- Form page:
-![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
-- Index page with some customized colors:
-![Administrate Bootstrap Theme index page customized](extra/screenshot_index_alt.png)
+
+- Index page: ![Administrate Bootstrap Theme index page](extra/screenshot_index.png)
+- Show page: ![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
+- Form page: ![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
+- Index page with some customized colors: ![Administrate Bootstrap Theme index page customized](extra/screenshot_index_alt.png)
 
 ## Do you like it? Star it!
+
 If you use this component just star it. A developer is more motivated to improve a project when there is some interest.
 
 Or consider offering me a coffee, it's a small thing but it is greatly appreciated: [about me](https://www.blocknot.es/about-me).
 
 ## Contributors
+
 - [Mattia Roccoberton](https://blocknot.es/): author
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

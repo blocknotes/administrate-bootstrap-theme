@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/blocknotes/administrate-bootstrap-theme'
 
-  spec.files = Dir['app/**/*', 'lib/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir['app/**/*', 'lib/**/*', 'MIT-LICENSE', 'README.md', 'package.json']
 
   spec.required_ruby_version = '>= 2.5.0'
 
