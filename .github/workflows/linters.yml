@@ -1,14 +1,15 @@
-name: linters
+---
+name: Linters
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
 
 jobs:
-  linters:
-    name: Linters
+  reviewdog:
+    name: reviewdog
     runs-on: ubuntu-latest
 
     steps:
@@ -21,23 +22,14 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Run RuboCop
-        uses: reviewdog/action-rubocop@v1
+      - uses: reviewdog/action-setup@v1
         with:
-          fail_on_error: true
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
-          rubocop_version: gemfile
-          rubocop_extensions: rubocop-packaging:gemfile rubocop-performance:gemfile rubocop-rails:gemfile rubocop-rspec:gemfile
+          reviewdog_version: latest
 
-      - name: Run Fasterer
-        uses: vk26/action-fasterer@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
+      - name: Run reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          reviewdog -fail-on-error -reporter=github-pr-review -runners=brakeman,fasterer,reek,rubocop
 
-      - name: Run Reek
-        uses: reviewdog/action-reek@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
+        # NOTE: check with: reviewdog -fail-on-error -reporter=github-pr-review -runners=fasterer -diff="git diff" -tee
