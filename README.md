@@ -1,4 +1,5 @@
-# Administrate Bootstrap Theme [![Gem Version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme) [![linters](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml) [![Specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml)
+# Administrate Bootstrap Theme
+[![gem version](https://badge.fury.io/rb/administrate-bootstrap-theme.svg)](https://badge.fury.io/rb/administrate-bootstrap-theme) [![Gem downloads](https://badgen.net/rubygems/dt/administrate-bootstrap-theme)](https://rubygems.org/gems/administrate-bootstrap-theme)  [![linters](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml) [![specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml)
 
 A Bootstrap 5 theme for [Administrate](https://github.com/thoughtbot/administrate).
 
@@ -8,6 +9,8 @@ Features:
 - allow to use *Bootstrap* components in the admin.
 
 See some [screenshots](#screenshots).
+
+Please :star: if you like it.
 
 ## Installation
 
