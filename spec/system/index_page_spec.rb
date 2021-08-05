@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe 'Index page', type: :system do
-  it 'checks some generic elements styles (=> the theme is loaded)' do
+  it 'checks some generic elements styles (=> the theme is loaded)', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page).to have_css('nav.navigation', style: { 'width' => '250px' })
@@ -19,14 +19,14 @@ RSpec.describe 'Index page', type: :system do
     end
   end
 
-  it 'checks some page header styles' do
+  it 'checks some page header styles', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page).to have_css('.main-content__header > h1', style: { 'font-size' => '25.6px' })
     expect(page).to have_css('.main-content__header > .search', style: { 'display' => 'flex' })
   end
 
-  it 'checks some page body table styles' do
+  it 'checks some page body table styles', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page).to have_css('.main-content__body th.cell-label > a', style: { 'font-weight' => '700' })

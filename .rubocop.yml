@@ -28,9 +28,6 @@ Layout/LineLength:
 RSpec/ExampleLength:
   Max: 8
 
-RSpec/MultipleExpectations:
-  Max: 5
-
 Style/HashEachMethods:
   Enabled: true
 
