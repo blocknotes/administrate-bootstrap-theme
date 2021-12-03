@@ -18,6 +18,8 @@
   .field-unit__field {
     @extend .col-10;
 
+    position: relative;
+
     > input:not([type="checkbox"]) {
       @extend .form-control;
     }
