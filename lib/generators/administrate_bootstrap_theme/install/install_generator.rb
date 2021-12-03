@@ -16,17 +16,8 @@ module AdministrateBootstrapTheme
 
     def create_stylesheets_assets
       create_file 'app/assets/stylesheets/administrate-bootstrap-theme.scss', <<~FILE
-        // Customizations variables
-        $navigation-bg: #055160;
-        $navigation-bg-active: #d51;
-        $navigation-fg: #eee;
-        $navigation-width: 300px;
-
-        $primary: #0d6ecd;
-        $secondary: #666;
-        $main-content-bg: #f4f8fb;
-        $main-content-fg: #222;
-
+        @import 'administrate-bootstrap-theme/colors/default';
+        @import 'administrate-bootstrap-theme/fonts/source_sans_pro';
         @import 'administrate-bootstrap-theme/theme';
       FILE
     end

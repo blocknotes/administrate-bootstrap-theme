@@ -25,10 +25,10 @@ Please :star: if you like it.
 Edit the variables defined in *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
 
 ```scss
+$navigation-width: 250px;
 $navigation-bg: #055160;
 $navigation-bg-active: #d51;
 $navigation-fg: #eee;
-$navigation-width: 250px;
 $primary: #0d6ecd;
 $secondary: #666;
 $main-content-bg: #f4f8fb;
@@ -39,16 +39,28 @@ $main-content-fg: #222;
 
 ### Extra improvements
 
+Choose a predefined color schema - *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+
+```scss
+@import 'administrate-bootstrap-theme/colors/default';
+// @import 'administrate-bootstrap-theme/colors/autumn';
+// @import 'administrate-bootstrap-theme/colors/forest';
+// @import 'administrate-bootstrap-theme/colors/industrial';
+// @import 'administrate-bootstrap-theme/colors/water';
+@import 'administrate-bootstrap-theme/theme';
+```
+
 Set a UI font:
 
 - you can of course import any font from Google fonts (or other providers);
-- to use a pre-configured one, add to *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+- to use a pre-configured one - *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
 ```scss
 @import 'administrate-bootstrap-theme/fonts/roboto';
 // @import 'administrate-bootstrap-theme/fonts/lato';
 // @import 'administrate-bootstrap-theme/fonts/montserrat';
 // @import 'administrate-bootstrap-theme/fonts/open_sans';
 // @import 'administrate-bootstrap-theme/fonts/source_sans_pro';
+@import 'administrate-bootstrap-theme/theme';
 ```
 
 For more improvements to the sidebar:
@@ -75,10 +87,9 @@ en:
 
 ## Screenshots
 
-- Index page: ![Administrate Bootstrap Theme index page](extra/screenshot_index.png)
-- Show page: ![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
-- Form page: ![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
+- Index, show and edit pages: ![Administrate Bootstrap Theme sections](extra/screenshot_sections.png)
 - Index page with some customized colors: ![Administrate Bootstrap Theme index page customized](extra/screenshot_index_alt.png)
+- Color schemas (none, default, autumn, forest, water, industrial): ![Administrate Bootstrap Theme colors](extra/screenshot_colors.png)
 
 ## Do you like it? Star it!
 
