@@ -1,8 +1,7 @@
 // from: node_modules/bootstrap/scss
 @import "bootstrap/bootstrap";
-// from: node_modules/flatpickr/dist/flatpickr.css => flatpickr/flatpickr.scss
-@import "flatpickr/flatpickr";
-@import "selectize";
+
+@import "selectize"; // included in Administrate
 
 @import "variables";
 
