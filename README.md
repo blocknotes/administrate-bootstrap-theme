@@ -22,7 +22,6 @@ Please :star: if you like it.
 
 ```js
 //= link administrate-bootstrap-theme/theme.css
-//= link administrate-bootstrap-theme/theme.js
 ```
 
 - Generate the layout views if they are missing: `rails generate administrate:views:layout` (only **_stylesheet** and **_javascript** partials are needed)
