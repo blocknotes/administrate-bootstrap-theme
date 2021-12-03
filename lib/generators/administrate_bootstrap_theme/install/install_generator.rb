@@ -22,6 +22,11 @@ module AdministrateBootstrapTheme
         $navigation-fg: #eee;
         $navigation-width: 300px;
 
+        $primary: #0d6ecd;
+        $secondary: #666;
+        $main-content-bg: #f4f8fb;
+        $main-content-fg: #222;
+
         @import 'administrate-bootstrap-theme/theme';
       FILE
     end

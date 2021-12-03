@@ -20,8 +20,10 @@
 }
 
 .main-content {
-  @extend .bg-light, .d-flex, .flex-column;
+  @extend .d-flex, .flex-column;
 
+  background-color: $main-content-bg;
+  color: $main-content-fg;
   overflow-y: scroll;
   width: calc(100% - #{$navigation-width});
 }

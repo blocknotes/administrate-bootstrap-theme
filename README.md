@@ -22,15 +22,19 @@ Please :star: if you like it.
 
 ## Customizations
 
-Edit the variables define in *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+Edit the variables defined in *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
 
 ```scss
 $navigation-bg: #055160;
 $navigation-bg-active: #d51;
-$navigation-width: 300px;
-$primary: #087990;
+$navigation-fg: #eee;
+$navigation-width: 250px;
+$primary: #0d6ecd;
+$secondary: #666;
+$main-content-bg: #f4f8fb;
+$main-content-fg: #222;
 
-@import 'administrate-bootstrap-theme/theme';
+@import 'administrate-bootstrap-theme/theme'; // required after the variables setup
 ```
 
 ### Extra improvements
