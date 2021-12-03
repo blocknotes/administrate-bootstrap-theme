@@ -1,13 +1,36 @@
 nav.navigation {
-  @extend .nav, .nav-pills, .flex-column, .p-3;
+  @extend .nav, .nav-pills, .flex-column, .p-3, .text-white;
 
+  background: $navigation-bg;
   width: $navigation-width;
 
   .button--alt {
-    @extend .btn, .mb-2;
+    @extend .btn, .btn-outline-light, .mb-2;
+
+    color: $navigation-fg;
+  }
+
+  .button--title {
+    @extend .btn, .mb-2, .pb-3, .fs-3, .border-bottom, .fw-bold, .text-start;
+
+    color: $navigation-fg;
+
+    &:hover {
+      color: $navigation-fg;
+    }
+  }
+
+  .copy {
+    @extend .pt-2, .border-top, .text-center;
   }
 
   .navigation__link {
-    @extend .nav-link;
+    @extend .btn-outline-light, .nav-link;
+
+    color: $navigation-fg;
+  }
+
+  .navigation__link--active {
+    background: $navigation-bg-active;
   }
 }

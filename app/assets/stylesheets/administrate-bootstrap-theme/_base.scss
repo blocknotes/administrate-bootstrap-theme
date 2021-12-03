@@ -1,16 +1,3 @@
-// from: node_modules/bootstrap/scss
-@import "bootstrap/bootstrap";
-
-@import "selectize"; // included in Administrate
-
-@import "variables";
-
-@import "components/navigation";
-@import "components/content_header";
-@import "components/content_body";
-@import "components/form";
-@import "components/pagination";
-
 .app-container {
   display: flex;
   flex-wrap: nowrap;
@@ -33,7 +20,7 @@
 }
 
 .main-content {
-  @extend .d-flex, .flex-column;
+  @extend .bg-light, .d-flex, .flex-column;
 
   overflow-y: scroll;
   width: calc(100% - #{$navigation-width});

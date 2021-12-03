@@ -28,7 +28,7 @@
   }
 
   .button {
-    @extend .btn, .btn-sm;
+    @extend .btn, .btn-sm, .btn-primary;
   }
 
   .search__input {
