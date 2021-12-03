@@ -4,14 +4,14 @@ RSpec.describe 'Index page', type: :system do
   it 'checks some generic elements styles (=> the theme is loaded)', :aggregate_failures do
     visit '/admin/authors'
 
-    expect(page).to have_css('nav.navigation', style: { 'width' => '250px' })
+    expect(page).to have_css('nav.navigation', style: { 'width' => '300px' })
     expect(page).to have_css('.main-content__body', style: { 'box-sizing' => 'border-box' })
   end
 
   it 'checks the position of the navigation menu items' do
     visit '/admin/authors'
 
-    rect = [16, 62, 218, 40]
+    rect = [16, 62, 268, 40]
     find_all('.navigation__link').each do |link|
       bounds = element_bounds(link)
       expect(bounds).to eq rect
