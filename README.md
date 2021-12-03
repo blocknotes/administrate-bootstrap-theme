@@ -7,7 +7,7 @@
 A Bootstrap 5 theme for [Administrate](https://github.com/thoughtbot/administrate).
 
 Features:
-- easy to install, just include CSS/JS to apply the theme to a default Administrate structure;
+- easy to install: just run the generator installer;
 - customizable via SASS variables;
 - allow to use *Bootstrap* components in the admin.
 
@@ -17,34 +17,14 @@ Please :star: if you like it.
 
 ## Installation
 
-- Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
-- Add to *app/assets/config/manifest.js*:
-
-```js
-//= link administrate-bootstrap-theme/theme.css
-```
-
-- Generate the layout views if they are missing: `rails generate administrate:views:layout` (only **_stylesheet** and **_javascript** partials are needed)
-- Update *app/views/admin/application/_stylesheet.html.erb*, leaving only:
-
-```erb
-<%= stylesheet_link_tag 'administrate-bootstrap-theme/theme', media: 'all' %>
-<%= yield :stylesheet %>
-```
-
-- Update *app/views/admin/application/_javascript.html.erb*, leaving only:
-
-```erb
-<%= javascript_include_tag 'administrate-bootstrap-theme/theme' %>
-<%= yield :javascript %>
-```
+- Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme', '~> 1.0'` (and execute `bundle`)
+- Run the installer: `bin/rails generate administrate_bootstrap_theme:install`
 
 ## Customizations
 
-To change variables it's necessary to create a new *.scss* (or *.sass*) file like this one (ex. *admin.scss*):
+Edit the variables define in *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
 
 ```scss
-// app/assets/stylesheets/admin.scss
 $navigation-bg: #055160;
 $navigation-bg-active: #d51;
 $navigation-width: 300px;
@@ -52,8 +32,6 @@ $primary: #087990;
 
 @import 'administrate-bootstrap-theme/theme';
 ```
-
-And replace the link tag in the *application.html.erb* with: `<%= stylesheet_link_tag 'admin', media: 'all' %>`
 
 For the complete list of options take a look [here](app/assets/stylesheets/administrate-bootstrap-theme/_variables.scss).
 
