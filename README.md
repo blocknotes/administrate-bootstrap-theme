@@ -33,7 +33,41 @@ $primary: #087990;
 @import 'administrate-bootstrap-theme/theme';
 ```
 
-For the complete list of options take a look [here](app/assets/stylesheets/administrate-bootstrap-theme/_variables.scss).
+### Extra improvements
+
+Set a UI font:
+
+- you can of course import any font from Google fonts (or other providers);
+- to use a pre-configured one, add to *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+```scss
+@import 'administrate-bootstrap-theme/fonts/roboto';
+// @import 'administrate-bootstrap-theme/fonts/lato';
+// @import 'administrate-bootstrap-theme/fonts/montserrat';
+// @import 'administrate-bootstrap-theme/fonts/open_sans';
+// @import 'administrate-bootstrap-theme/fonts/source_sans_pro';
+```
+
+For more improvements to the sidebar:
+
+- generate the navigation partial: `bin/rails generate administrate:views:navigation`
+- edit the partial *app/views/admin/application/_navigation.html.erb*
+- to change the _Back to app_ button to a title component: replace the classes for the first link (_back_to_app_) with `button--title`
+- update the translation button title editing *config/locales/en.yml*:
+```yml
+en:
+  administrate:
+    navigation:
+      back_to_app: 'MyAdmin'
+```
+- to add a copyright line at the bottom, update the links part with:
+```erb
+<div class="mb-auto">
+  <% Administrate::Namespace.new(namespace).resources_with_index_route.each do |resource| %>
+    ...
+  <% end %>
+</div>
+<div class="copy">by Mat</div>
+```
 
 ## Screenshots
 
