@@ -1,14 +1,9 @@
 .app-container {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100vh;
+  @extend .d-flex, .flex-nowrap, .vh-100;
 }
 
 .flashes {
-  pointer-events: none;
-  position: fixed;
-  text-align: center;
-  width: calc(100% - #{$navigation-width});
+  @extend .pe-none, .fixed-top, .text-center;
 
   > .flash {
     @extend .alert, .d-inline-block;

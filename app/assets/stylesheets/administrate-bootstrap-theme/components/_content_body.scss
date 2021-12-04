@@ -11,7 +11,7 @@
     dt {
       @extend .col-2, .text-end;
 
-      min-height: 32px;
+      min-height: 2rem;
     }
 
     dd {
@@ -20,7 +20,7 @@
   }
 
   a {
-    text-decoration: none;
+    @extend .text-decoration-none;
   }
 
   table {
@@ -33,7 +33,7 @@
 
   .attribute--nested {
     > div {
-      display: flex;
+      @extend .d-flex;
     }
 
     legend {
@@ -46,8 +46,8 @@
   }
 
   .cell-label__sort-indicator > svg {
-    height: 20px;
-    width: 20px;
+    height: 1.2rem;
+    width: 1.2rem;
   }
 
   .cell-label__sort-indicator--desc > svg {
@@ -60,12 +60,10 @@
 
   .js-table-row {
     > td {
-      padding: 0.25rem 0.25rem;
-      text-align: center;
+      @extend .text-center, .p-1;
 
       &.cell-data {
-        padding: 0.5rem 0.5rem;
-        text-align: left;
+        @extend .text-start, .p-2;
       }
     }
 

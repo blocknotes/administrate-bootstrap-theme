@@ -15,15 +15,13 @@
   }
 
   > h1 {
-    @extend .nav, .col-12, .col-lg-auto, .me-lg-auto, .mb-2, .justify-content-center, .mb-md-0;
-
-    font-size: 1.6rem;
+    @extend .nav, .h3, .col-12, .col-lg-auto, .me-lg-auto, .mb-2, .justify-content-center, .mb-md-0;
   }
 
   svg {
     &.search__eyeglass-icon, &.search__clear-icon {
-      height: 20px;
-      width: 20px;
+      height: 1.2rem;
+      width: 1.2rem;
     }
   }
 
