@@ -7,7 +7,7 @@
 A Bootstrap 5 theme for [Administrate](https://github.com/thoughtbot/administrate).
 
 Features:
-- easy to install, just include CSS/JS to apply the theme to a default Administrate structure;
+- easy to install: just run the generator installer;
 - customizable via SASS variables;
 - allow to use *Bootstrap* components in the admin.
 
@@ -17,53 +17,79 @@ Please :star: if you like it.
 
 ## Installation
 
-- Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme'` (and execute `bundle`)
-- Add to *app/assets/config/manifest.js*:
-
-```js
-//= link administrate-bootstrap-theme/theme.css
-//= link administrate-bootstrap-theme/theme.js
-```
-
-- Generate the layout views if they are missing: `rails generate administrate:views:layout` (only **_stylesheet** and **_javascript** partials are needed)
-- Update *app/views/admin/application/_stylesheet.html.erb*, leaving only:
-
-```erb
-<%= stylesheet_link_tag 'administrate-bootstrap-theme/theme', media: 'all' %>
-<%= yield :stylesheet %>
-```
-
-- Update *app/views/admin/application/_javascript.html.erb*, leaving only:
-
-```erb
-<%= javascript_include_tag 'administrate-bootstrap-theme/theme' %>
-<%= yield :javascript %>
-```
+- Add to *Gemfile* (of an Administrate project): `gem 'administrate-bootstrap-theme', '~> 1.0'` (and execute `bundle`)
+- Run the installer: `bin/rails generate administrate_bootstrap_theme:install`
 
 ## Customizations
 
-To change variables it's necessary to create a new *.scss* (or *.sass*) file like this one (ex. *admin.scss*):
+Edit the variables defined in *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
 
 ```scss
-// app/assets/stylesheets/admin.scss
+$navigation-width: 250px;
 $navigation-bg: #055160;
 $navigation-bg-active: #d51;
-$navigation-width: 300px;
-$primary: #087990;
+$navigation-fg: #eee;
+$primary: #0d6ecd;
+$secondary: #666;
+$main-content-bg: #f4f8fb;
+$main-content-fg: #222;
 
+@import 'administrate-bootstrap-theme/theme'; // required after the variables setup
+```
+
+### Extra improvements
+
+Choose a predefined color schema - *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+
+```scss
+@import 'administrate-bootstrap-theme/colors/default';
+// @import 'administrate-bootstrap-theme/colors/autumn';
+// @import 'administrate-bootstrap-theme/colors/forest';
+// @import 'administrate-bootstrap-theme/colors/industrial';
+// @import 'administrate-bootstrap-theme/colors/water';
 @import 'administrate-bootstrap-theme/theme';
 ```
 
-And replace the link tag in the *application.html.erb* with: `<%= stylesheet_link_tag 'admin', media: 'all' %>`
+Set a UI font:
 
-For the complete list of options take a look [here](app/assets/stylesheets/administrate-bootstrap-theme/_variables.scss).
+- you can of course import any font from Google fonts (or other providers);
+- to use a pre-configured one - *app/assets/stylesheets/administrate-bootstrap-theme.scss*:
+```scss
+@import 'administrate-bootstrap-theme/fonts/roboto';
+// @import 'administrate-bootstrap-theme/fonts/lato';
+// @import 'administrate-bootstrap-theme/fonts/montserrat';
+// @import 'administrate-bootstrap-theme/fonts/open_sans';
+// @import 'administrate-bootstrap-theme/fonts/source_sans_pro';
+@import 'administrate-bootstrap-theme/theme';
+```
+
+For more improvements to the sidebar:
+
+- generate the navigation partial: `bin/rails generate administrate:views:navigation`
+- edit the partial *app/views/admin/application/_navigation.html.erb*
+- to change the _Back to app_ button to a title component: replace the classes for the first link (_back_to_app_) with `button--title`
+- update the translation button title editing *config/locales/en.yml*:
+```yml
+en:
+  administrate:
+    navigation:
+      back_to_app: 'MyAdmin'
+```
+- to add a copyright line at the bottom, update the links part with:
+```erb
+<div class="mb-auto">
+  <% Administrate::Namespace.new(namespace).resources_with_index_route.each do |resource| %>
+    ...
+  <% end %>
+</div>
+<div class="copy">by Mat</div>
+```
 
 ## Screenshots
 
-- Index page: ![Administrate Bootstrap Theme index page](extra/screenshot_index.png)
-- Show page: ![Administrate Bootstrap Theme show page](extra/screenshot_show.png)
-- Form page: ![Administrate Bootstrap Theme edit page](extra/screenshot_edit.png)
+- Index, show and edit pages: ![Administrate Bootstrap Theme sections](extra/screenshot_sections.png)
 - Index page with some customized colors: ![Administrate Bootstrap Theme index page customized](extra/screenshot_index_alt.png)
+- Color schemas (none, default, autumn, forest, water, industrial): ![Administrate Bootstrap Theme colors](extra/screenshot_colors.png)
 
 ## Do you like it? Star it!
 

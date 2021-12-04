@@ -1,65 +1,14 @@
+// from: node_modules/bootstrap/scss
+@import "bootstrap/bootstrap";
+
+@import "selectize"; // included in Administrate
+
+@import "variables";
+
+@import "components/navigation";
+@import "components/content_header";
+@import "components/content_body";
+@import "components/form";
+@import "components/pagination";
+
 @import "base";
-
-nav.navigation {
-  @extend .text-white;
-
-  background: $navigation-bg;
-
-  .button--alt {
-    @extend .btn-outline-light;
-
-    color: $navigation-fg;
-  }
-
-  .navigation__link {
-    @extend .btn-outline-light;
-
-    color: $navigation-fg;
-  }
-
-  .navigation__link--active {
-    background: $navigation-bg-active;
-  }
-}
-
-nav.pagination {
-  @extend .border;
-}
-
-.main-content {
-  @extend .bg-light;
-}
-
-.main-content__body {
-  table {
-    @extend .table-striped;
-  }
-
-  .attribute-data > table {
-    @extend .table-bordered;
-  }
-
-  .form-actions > input {
-    @extend .btn-primary;
-  }
-
-  .js-table-row {
-    .action-show {
-      @extend .link-secondary;
-    }
-
-    .action-edit {
-      @extend .btn-secondary;
-    }
-
-    [data-method="delete"] {
-      @extend .btn-danger;
-    }
-  }
-}
-
-.main-content__header {
-  .button {
-    @extend .btn-primary;
-  }
-}

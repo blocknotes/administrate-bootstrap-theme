@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Bootstrap JS', type: :system do
-  it 'checks that Bootstrap JS is loaded', :aggregate_failures do
+RSpec.describe 'Bootstrap', type: :system do
+  it 'has a bootstrap JS object defined including Tooltip.VERSION', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page.evaluate_script('typeof bootstrap')).to eq 'object'

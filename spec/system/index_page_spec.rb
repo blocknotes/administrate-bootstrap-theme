@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 RSpec.describe 'Index page', type: :system do
-  it 'checks some generic elements styles (=> the theme is loaded)', :aggregate_failures do
+  it 'has a sidebar of 300px and main content box-sizing is set', :aggregate_failures do
     visit '/admin/authors'
 
-    expect(page).to have_css('nav.navigation', style: { 'width' => '250px' })
+    expect(page).to have_css('nav.navigation', style: { 'width' => '300px' })
     expect(page).to have_css('.main-content__body', style: { 'box-sizing' => 'border-box' })
   end
 
-  it 'checks the position of the navigation menu items' do
+  it 'has navigation links with the expected bounds' do
     visit '/admin/authors'
 
-    rect = [16, 62, 218, 40]
+    rect = [16, 62, 268, 40]
     find_all('.navigation__link').each do |link|
       bounds = element_bounds(link)
       expect(bounds).to eq rect
@@ -19,14 +19,14 @@ RSpec.describe 'Index page', type: :system do
     end
   end
 
-  it 'checks some page header styles', :aggregate_failures do
+  it 'has an header with h1 title and a search box with display: flex', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page).to have_css('.main-content__header > h1', style: { 'font-size' => '25.6px' })
     expect(page).to have_css('.main-content__header > .search', style: { 'display' => 'flex' })
   end
 
-  it 'checks some page body table styles', :aggregate_failures do
+  it 'has the expected styles in the main content table rows', :aggregate_failures do
     visit '/admin/authors'
 
     expect(page).to have_css('.main-content__body th.cell-label > a', style: { 'font-weight' => '700' })

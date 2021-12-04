@@ -1,0 +1,10 @@
+Description:
+    AdministrateBootstrapTheme installer
+
+Example:
+    bin/rails generate administrate_bootstrap_theme:install
+
+    This will:
+        - create a new initializer: administrate_bootstrap_theme
+        - create a new SCSS stylesheet: administrate-bootstrap-theme.scss
+        - append the necessary assets to: config/initializers/assets.rb

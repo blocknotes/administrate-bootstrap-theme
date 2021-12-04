@@ -1,6 +1,10 @@
 .main-content__body {
   @extend .container-fluid, .mb-3;
 
+  table {
+    @extend .table-striped;
+  }
+
   > dl {
     @extend .row;
 
@@ -21,6 +25,10 @@
 
   table {
     @extend .table;
+  }
+
+  .attribute-data > table {
+    @extend .table-bordered;
   }
 
   .attribute--nested {
@@ -46,6 +54,10 @@
     transform: rotate(180deg);
   }
 
+  .form-actions > input {
+    @extend .btn-primary;
+  }
+
   .js-table-row {
     > td {
       padding: 0.25rem 0.25rem;
@@ -57,8 +69,16 @@
       }
     }
 
+    .action-show {
+      @extend .link-secondary;
+    }
+
     .action-edit {
-      @extend .btn, .btn-sm;
+      @extend .btn, .btn-sm, .btn-secondary;
+    }
+
+    [data-method="delete"] {
+      @extend .btn-danger;
     }
 
     [data-method="delete"] {

@@ -1,5 +1,5 @@
 nav.pagination {
-  @extend .justify-content-center, .mb-3;
+  @extend .border, .justify-content-center, .mb-3;
 
   > span {
     @extend .nav-link;
