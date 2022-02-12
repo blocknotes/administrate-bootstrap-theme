@@ -3,6 +3,7 @@
 [![gem downloads](https://badgen.net/rubygems/dt/administrate-bootstrap-theme)](https://rubygems.org/gems/administrate-bootstrap-theme) 
 [![linters](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/linters.yml)
 [![specs](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/specs.yml)
+[![CodeQL](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/blocknotes/administrate-bootstrap-theme/actions/workflows/codeql-analysis.yml)
 
 A Bootstrap 5 theme for [Administrate](https://github.com/thoughtbot/administrate).
 
