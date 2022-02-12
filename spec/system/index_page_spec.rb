@@ -22,7 +22,7 @@ RSpec.describe 'Index page', type: :system do
   it 'has an header with h1 title and a search box with display: flex', :aggregate_failures do
     visit '/admin/authors'
 
-    expect(page).to have_css('.main-content__header > h1', style: { 'font-size' => '25.6px' })
+    expect(page).to have_css('.main-content__header > h1', style: { 'font-size' => '28px' })
     expect(page).to have_css('.main-content__header > .search', style: { 'display' => 'flex' })
   end
 
