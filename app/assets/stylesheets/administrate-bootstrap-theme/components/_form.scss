@@ -16,16 +16,14 @@
   }
 
   .field-unit__field {
-    @extend .col-10;
-
-    position: relative;
+    @extend .col-10, .position-relative;
 
     > input:not([type="checkbox"]) {
       @extend .form-control;
     }
 
     > input[type="checkbox"] {
-      @extend .form-check-input
+      @extend .form-check-input, .mt-2;
     }
 
     > select {
@@ -34,7 +32,8 @@
 
     > textarea {
       @extend .form-control;
-      min-height: 150px;
+
+      min-height: 10rem;
     }
   }
 
@@ -42,10 +41,9 @@
     @extend .col-2;
 
     > label {
-      @extend .col-form-label;
+      @extend .col-form-label, .pb-1, .w-100;
+
       border-bottom: 1px dashed #ccc;
-      padding-bottom: 0;
-      width: 100%;
     }
   }
 
