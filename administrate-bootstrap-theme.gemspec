@@ -20,8 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['app/**/*', 'lib/**/*', 'MIT-LICENSE', 'README.md', 'package.json']
 
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.required_ruby_version = '>= 2.6.0'
 
   spec.add_runtime_dependency 'administrate', '~> 0.14'
-  spec.add_runtime_dependency 'sassc', '~> 2.4'
 end
