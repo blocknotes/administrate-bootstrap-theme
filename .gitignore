@@ -16,3 +16,4 @@ Gemfile.lock
 /spec/dummy/tmp/
 
 _misc/
+node_modules/
