@@ -3,12 +3,13 @@ name: Specs
 
 on:
   push:
-    branches: [develop, main]
+    branches: [main]
   pull_request:
-    branches: [develop, main]
+    branches: [main]
 
 jobs:
-  test:
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,7 +17,7 @@ jobs:
         ruby: ['2.6', '2.7', '3.0']
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Ruby
@@ -28,7 +29,7 @@ jobs:
       - name: Run tests
         run: bin/rspec --profile
 
-      - name: Archive screenshots for failed tests
+      - name: On failure, store screenshots as artifacts
         uses: actions/upload-artifact@v2
         if: failure()
         with:
