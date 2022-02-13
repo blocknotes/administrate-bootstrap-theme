@@ -39,4 +39,6 @@ RSpec.configure do |config|
   config.before(:suite) do
     Rails.application.load_seed # loading seeds
   end
+
+  config.fail_fast = true if ENV['RSPEC_FAIL_FAST'] == '1'
 end
