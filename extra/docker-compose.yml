@@ -1,0 +1,27 @@
+---
+version: "3.3"
+
+services:
+  tests_26:
+    build:
+      context: ..
+      dockerfile: extra/Dockerfile_26
+    environment:
+      CI: 1
+    command: bin/rspec
+
+  tests_27:
+    build:
+      context: ..
+      dockerfile: extra/Dockerfile_27
+    environment:
+      CI: 1
+    command: bin/rspec
+
+  tests_30:
+    build:
+      context: ..
+      dockerfile: extra/Dockerfile_30
+    environment:
+      CI: 1
+    command: bin/rspec
