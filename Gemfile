@@ -14,6 +14,7 @@ group :development, :test do
   gem 'capybara'
   gem 'cuprite'
   gem 'rspec-rails'
+  gem 'rspec-retry'
 
   # Linters
   gem 'brakeman'

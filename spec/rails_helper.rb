@@ -9,6 +9,7 @@ require File.expand_path('dummy/config/environment.rb', __dir__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 
 require 'rspec/rails'
+require 'rspec/retry'
 require 'capybara/rails'
 
 Dir[File.expand_path('support/**/*.rb', __dir__)].sort.each { |f| require f }
@@ -35,6 +36,11 @@ RSpec.configure do |config|
   config.render_views = false
 
   config.fail_fast = true if ENV.fetch('RSPEC_FAIL_FAST', false) == '1'
+
+  # rspec-retry
+  config.default_retry_count = 2
+
+  ###
 
   config.include Helpers
 
