@@ -15,11 +15,11 @@ appraise 'rails61-administrate' do # latest administrate
   gem 'rails', '~> 6.1.0'
 end
 
-# appraise 'rails70-administrate016' do
-#   gem 'administrate', '~> 0.16.0'
-#   gem 'rails', '~> 7.0.0'
-# end
+appraise 'rails70-administrate016' do
+  gem 'administrate', '~> 0.16.0'
+  gem 'rails', '~> 7.0.0'
+end
 
-# appraise 'rails70-administrate' do # latest administrate
-#   gem 'rails', '~> 7.0.0'
-# end
+appraise 'rails70-administrate' do # latest administrate
+  gem 'rails', '~> 7.0.0'
+end
