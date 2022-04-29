@@ -34,11 +34,21 @@ RSpec.configure do |config|
   config.use_instantiated_fixtures = false
   config.render_views = false
 
+  config.fail_fast = true if ENV.fetch('RSPEC_FAIL_FAST', false) == '1'
+
   config.include Helpers
 
   config.before(:suite) do
+    require 'administrate/version'
+
+    intro = ('-' * 80)
+    intro << "\n"
+    intro << "- Ruby:         #{RUBY_VERSION}\n"
+    intro << "- Rails:        #{Rails.version}\n"
+    intro << "- Administrate: #{Administrate::VERSION}\n"
+    intro << ('-' * 80)
+
+    RSpec.configuration.reporter.message(intro)
     Rails.application.load_seed # loading seeds
   end
-
-  config.fail_fast = true if ENV['RSPEC_FAIL_FAST'] == '1'
 end

@@ -5,6 +5,14 @@
 CUPRITE_HEADLESS=0 bin/rspec
 ```
 
+## Releases
+
+```sh
+# Update version.rb with the new version
+# Update the gemfiles:
+bin/appraisal
+```
+
 ## Tests using Docker
 
 ```sh

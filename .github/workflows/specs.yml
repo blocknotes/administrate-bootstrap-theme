@@ -3,18 +3,23 @@ name: Specs
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  tests:
-    name: Tests
+  test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         ruby: ['2.6', '2.7', '3.0']
+        gemfile: ['rails60_administrate016', 'rails60_administrate', 'rails61_administrate']
+
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
 
     steps:
       - name: Checkout repository
@@ -27,9 +32,9 @@ jobs:
           bundler-cache: true
 
       - name: Run tests
-        run: bin/rspec --profile
+        run: bundle exec rspec --profile
 
-      - name: On failure, store screenshots as artifacts
+      - name: On failure, archive screenshots as artifacts
         uses: actions/upload-artifact@v2
         if: failure()
         with:
