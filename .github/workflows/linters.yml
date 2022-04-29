@@ -3,31 +3,32 @@ name: Linters
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   reviewdog:
-    name: Reviewdog
+    name: reviewdog
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
-          bundler-cache: true
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Set up Reviewdog
-        uses: reviewdog/action-setup@v1
+      - uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
 
-      - name: Run Reviewdog
+      - name: Run reviewdog
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

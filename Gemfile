@@ -6,16 +6,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 group :development, :test do
-  gem 'puma', '~> 4.3'
-  gem 'rails', '~> 6.0'
-  gem 'sassc', '~> 2.4'
-  gem 'sprockets-rails', '~> 2.3.3'
-  gem 'sqlite3', '~> 1.4'
+  gem 'puma'
+  gem 'sassc'
+  gem 'sqlite3'
 
   # Testing
-  gem 'capybara', '~> 3.33'
-  gem 'cuprite', '~> 0.13'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'capybara'
+  gem 'cuprite'
+  gem 'rspec-rails'
+  gem 'rspec-retry'
 
   # Linters
   gem 'brakeman'
