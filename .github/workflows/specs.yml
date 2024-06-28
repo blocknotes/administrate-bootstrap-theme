@@ -1,5 +1,5 @@
 ---
-name: Specs
+name: Specs Rails 6
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby: ['2.6', '2.7', '3.0']
+        ruby: ['3.0', '3.1', '3.2']
         gemfile: ['rails60_administrate016', 'rails60_administrate', 'rails61_administrate']
 
     env:
@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
