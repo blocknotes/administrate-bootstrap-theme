@@ -8,7 +8,6 @@ gemspec
 group :development, :test do
   gem 'puma'
   gem 'sassc'
-  gem 'sqlite3'
 
   # Testing
   gem 'capybara'
