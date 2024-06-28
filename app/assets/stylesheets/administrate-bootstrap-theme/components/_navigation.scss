@@ -30,6 +30,10 @@ nav.navigation {
     color: $navigation-fg;
   }
 
+  .navigation__link:hover {
+    background: $navigation-fg;
+  }
+
   .navigation__link--active {
     background: $navigation-bg-active;
   }

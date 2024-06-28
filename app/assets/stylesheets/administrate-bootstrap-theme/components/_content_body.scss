@@ -5,7 +5,7 @@
     @extend .table-striped;
   }
 
-  > dl {
+  >dl {
     @extend .row;
 
     dt {
@@ -17,6 +17,20 @@
     dd {
       @extend .col-10;
     }
+
+    >fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+
+    .attribute-data {
+      padding-left: var(--bs-gutter-x);
+    }
+  }
+
+  th[scope="col"] {
+    border-bottom: 1px solid $dark;
   }
 
   a {
@@ -27,12 +41,12 @@
     @extend .table;
   }
 
-  .attribute-data > table {
+  .attribute-data>table {
     @extend .table-bordered;
   }
 
   .attribute--nested {
-    > div {
+    >div {
       @extend .d-flex;
     }
 
@@ -45,21 +59,21 @@
     }
   }
 
-  .cell-label__sort-indicator > svg {
+  .cell-label__sort-indicator>svg {
     height: 1.2rem;
     width: 1.2rem;
   }
 
-  .cell-label__sort-indicator--desc > svg {
+  .cell-label__sort-indicator--desc>svg {
     transform: rotate(180deg);
   }
 
-  .form-actions > input {
+  .form-actions>input {
     @extend .btn-primary;
   }
 
   .js-table-row {
-    > td {
+    >td {
       @extend .text-center, .p-1;
 
       &.cell-data {

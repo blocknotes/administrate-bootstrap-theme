@@ -3,5 +3,5 @@
 module AdministrateBootstrapTheme
   VERSION = '1.0.6'
 
-  BOOTSTRAP_VERSION = '5.1.3'
+  BOOTSTRAP_VERSION = '5.3.3'
 end
