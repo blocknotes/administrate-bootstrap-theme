@@ -2,13 +2,15 @@
 
 source "https://rubygems.org"
 
+gem "ffi", "1.15.5"
+gem "psych", "< 4"
 gem "rails", "~> 6.0.0"
 gem "selenium-webdriver", require: false
+gem "sqlite3", "~> 1.4"
 
 group :development, :test do
   gem "puma"
   gem "sassc"
-  gem "sqlite3"
   gem "capybara"
   gem "cuprite"
   gem "rspec-rails"
