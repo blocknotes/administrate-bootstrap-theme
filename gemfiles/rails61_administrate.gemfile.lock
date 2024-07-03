@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    administrate-bootstrap-theme (1.0.6)
+    administrate-bootstrap-theme (1.1.0)
       administrate (~> 0.14)
 
 GEM
