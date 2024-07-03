@@ -31,6 +31,11 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
 
+      - name: Assets precompile
+        env:
+          RAILS_ENV: test
+        run: cd spec/dummy && bundle exec rails assets:precompile
+
       - name: Run tests
         run: bundle exec rspec --profile
 
