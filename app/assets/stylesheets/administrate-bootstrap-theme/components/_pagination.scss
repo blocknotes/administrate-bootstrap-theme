@@ -12,4 +12,8 @@ nav.pagination {
   >span.current {
     @extend .disabled, .page-link;
   }
+
+  >span.gap {
+    @extend .page-link;
+  }
 }
