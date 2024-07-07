@@ -11,9 +11,9 @@ group :development, :test do
 
   # Testing
   gem 'capybara'
-  gem 'cuprite'
   gem 'rspec-rails'
   gem 'rspec-retry'
+  gem 'selenium-webdriver'
 
   # Linters
   gem 'brakeman'

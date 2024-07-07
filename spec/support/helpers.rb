@@ -9,9 +9,6 @@ module Helpers
         return [rect.left, rect.top, rect.width, rect.height];
       }();
     JS_BLOCK
-    browser = page.driver.browser
-    browser.evaluate(code)
-
-    # alternative option: Capybara.evaluate_script(code)
+    Capybara.evaluate_script(code)
   end
 end

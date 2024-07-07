@@ -11,6 +11,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'rspec/retry'
 require 'capybara/rails'
+require 'selenium-webdriver'
 
 Dir[File.expand_path('support/**/*.rb', __dir__)].sort.each { |f| require f }
 
