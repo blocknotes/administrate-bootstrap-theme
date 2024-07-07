@@ -1,11 +1,7 @@
 # frozen_string_literal: true
 
-Capybara.default_driver = Capybara.javascript_driver = :cuprite
-
 RSpec.configure do |config|
-  # Make sure this hook runs before others
   config.prepend_before(:each, type: :system) do
-    # Use JS driver always
-    driven_by Capybara.javascript_driver
+    driven_by :selenium, using: :headless_chrome
   end
 end

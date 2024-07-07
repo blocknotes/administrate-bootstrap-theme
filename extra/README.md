@@ -1,10 +1,5 @@
 # Development
 
-```sh
-# Running specs without headless mode:
-CUPRITE_HEADLESS=0 bin/rspec
-```
-
 ## Releases
 
 ```sh
